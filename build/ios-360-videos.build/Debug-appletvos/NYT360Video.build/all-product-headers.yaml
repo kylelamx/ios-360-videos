@@ -1,0 +1,58 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/kyle/truex/ios-360-videos/build/Debug-appletvos/NYT360Video.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "NYT360CameraPanGestureRecognizer.h",
+          'external-contents': "/Users/kyle/truex/ios-360-videos/Sources/NYT360CameraPanGestureRecognizer.h"
+        },
+        {
+          'type': 'file',
+          'name': "NYT360DataTypes.h",
+          'external-contents': "/Users/kyle/truex/ios-360-videos/Sources/NYT360DataTypes.h"
+        },
+        {
+          'type': 'file',
+          'name': "NYT360MotionManagement.h",
+          'external-contents': "/Users/kyle/truex/ios-360-videos/Sources/NYT360MotionManagement.h"
+        },
+        {
+          'type': 'file',
+          'name': "NYT360MotionManager.h",
+          'external-contents': "/Users/kyle/truex/ios-360-videos/Sources/NYT360MotionManager.h"
+        },
+        {
+          'type': 'file',
+          'name': "NYT360Video-Swift.h",
+          'external-contents': "/Users/kyle/truex/ios-360-videos/build/Debug-appletvos/NYT360Video.framework/Headers/NYT360Video-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "NYT360Video.h",
+          'external-contents': "/Users/kyle/truex/ios-360-videos/Sources/NYT360Video.h"
+        },
+        {
+          'type': 'file',
+          'name': "NYT360ViewController.h",
+          'external-contents': "/Users/kyle/truex/ios-360-videos/Sources/NYT360ViewController.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/kyle/truex/ios-360-videos/build/Debug-appletvos/NYT360Video.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/kyle/truex/ios-360-videos/build/ios-360-videos.build/Debug-appletvos/NYT360Video.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

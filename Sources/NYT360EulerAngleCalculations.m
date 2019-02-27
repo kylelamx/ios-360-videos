@@ -63,7 +63,7 @@ NYT360EulerAngleCalculationResult NYT360UpdatedPositionAndAnglesForAllowedAxes(C
     return NYT360EulerAngleCalculationResultMake(position, eulerAngles);
 }
 
-NYT360EulerAngleCalculationResult NYT360DeviceMotionCalculation(CGPoint position, CMRotationRate rotationRate, UIInterfaceOrientation orientation, NYT360PanningAxis allowedPanningAxes, CGFloat noiseThreshold) {
+NYT360EulerAngleCalculationResult NYT360DeviceMotionCalculation(CGPoint position, NYT360PanningAxis allowedPanningAxes, CGFloat noiseThreshold) {
     
     static CGFloat NYT360EulerAngleCalculationRotationRateDampingFactor = 0.02;
     
@@ -81,31 +81,31 @@ NYT360EulerAngleCalculationResult NYT360DeviceMotionCalculation(CGPoint position
     // ~ Jared Sinclair, August 1, 2016.
     // See also: https://forums.developer.apple.com/thread/12049
     
-    if (fabs(rotationRate.x) < noiseThreshold) {
-        rotationRate.x = 0;
-    }
-    
-    if (fabs(rotationRate.y) < noiseThreshold) {
-        rotationRate.y = 0;
-    }
-    
+//    if (fabs(rotationRate.x) < noiseThreshold) {
+//        rotationRate.x = 0;
+//    }
+//
+//    if (fabs(rotationRate.y) < noiseThreshold) {
+//        rotationRate.y = 0;
+//    }
+//
     CGFloat damping = NYT360EulerAngleCalculationRotationRateDampingFactor;
     
     // TODO: [thiago] I think this can be simplified later
-    if (UIInterfaceOrientationIsLandscape(orientation)) {
-        if (orientation == UIInterfaceOrientationLandscapeLeft) {
-            position = CGPointMake(position.x + rotationRate.x * damping * -1,
-                                   position.y + rotationRate.y * damping);
-        }
-        else {
-            position = CGPointMake(position.x + rotationRate.x * damping,
-                                   position.y + rotationRate.y * damping * -1);
-        }
-    }
-    else {
-        position = CGPointMake(position.x + rotationRate.y * damping,
-                               position.y - rotationRate.x * damping * -1);
-    }
+//    if (UIInterfaceOrientationIsLandscape(orientation)) {
+//        if (orientation == UIInterfaceOrientationLandscapeLeft) {
+//            position = CGPointMake(position.x + rotationRate.x * damping * -1,
+//                                   position.y + rotationRate.y * damping);
+//        }
+//        else {
+//            position = CGPointMake(position.x + rotationRate.x * damping,
+//                                   position.y + rotationRate.y * damping * -1);
+//        }
+//    }
+//    else {
+//        position = CGPointMake(position.x + rotationRate.y * damping,
+//                               position.y - rotationRate.x * damping * -1);
+//    }
     position = CGPointMake(position.x,
                            NYT360Clamp(position.y, -M_PI / 2, M_PI / 2));
     

@@ -8,7 +8,7 @@
 
 @import UIKit;
 @import SceneKit;
-@import CoreMotion;
+//@import CoreMotion;
 
 #import "NYT360DataTypes.h"
 #import "NYT360MotionManagement.h"

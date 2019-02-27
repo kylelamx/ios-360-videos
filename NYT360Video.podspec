@@ -20,5 +20,5 @@ Pod::Spec.new do |s|
     s.source_files = 'Sources/**/*.{h,m}'
     s.public_header_files = 'Sources/NYT360Video.h', 'Sources/NYT360ViewController.h', 'Sources/NYT360DataTypes.h', 'Sources/NYT360MotionManagement.h', 'Sources/NYT360MotionManager.h', 'Sources/NYT360CameraPanGestureRecognizer.h'
 
-    s.frameworks = 'UIKit', 'SceneKit', 'SpriteKit', 'AVFoundation', 'CoreMotion'
+    s.frameworks = 'UIKit', 'SceneKit', 'SpriteKit', 'AVFoundation'
 end

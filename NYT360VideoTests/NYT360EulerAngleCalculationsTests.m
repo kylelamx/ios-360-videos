@@ -39,7 +39,7 @@
     rate.y = -1000;
     rate.z = 10;
     UIInterfaceOrientation orientation = UIInterfaceOrientationLandscapeLeft;
-    NYT360EulerAngleCalculationResult result = NYT360DeviceMotionCalculation(position, rate, orientation, NYT360PanningAxisHorizontal, NYT360EulerAngleCalculationNoiseThresholdDefault);
+    NYT360EulerAngleCalculationResult result = NYT360DeviceMotionCalculation(position, NYT360PanningAxisHorizontal, NYT360EulerAngleCalculationNoiseThresholdDefault);
     XCTAssertNotEqual(result.position.x, 0);
     XCTAssertEqual(result.position.y, 0);
 }
@@ -51,7 +51,7 @@
     rate.y = -1000;
     rate.z = 10;
     UIInterfaceOrientation orientation = UIInterfaceOrientationLandscapeLeft;
-    NYT360EulerAngleCalculationResult result = NYT360DeviceMotionCalculation(position, rate, orientation, NYT360PanningAxisVertical, NYT360EulerAngleCalculationNoiseThresholdDefault);
+    NYT360EulerAngleCalculationResult result = NYT360DeviceMotionCalculation(position, NYT360PanningAxisVertical, NYT360EulerAngleCalculationNoiseThresholdDefault);
     XCTAssertEqual(result.position.x, 0);
     XCTAssertNotEqual(result.position.y, 0);
 }
@@ -63,7 +63,7 @@
     rate.y = NYT360EulerAngleCalculationNoiseThresholdDefault * 2;
     rate.z = 10;
     UIInterfaceOrientation orientation = UIInterfaceOrientationLandscapeLeft;
-    NYT360EulerAngleCalculationResult result = NYT360DeviceMotionCalculation(position, rate, orientation, NYT360PanningAxisHorizontal, NYT360EulerAngleCalculationNoiseThresholdDefault);
+    NYT360EulerAngleCalculationResult result = NYT360DeviceMotionCalculation(position, NYT360PanningAxisHorizontal, NYT360EulerAngleCalculationNoiseThresholdDefault);
     XCTAssertEqual(result.position.x, position.x);
     XCTAssertNotEqual(result.position.y, position.y);
 }
@@ -75,7 +75,7 @@
     rate.y = NYT360EulerAngleCalculationNoiseThresholdDefault * 2;
     rate.z = 10;
     UIInterfaceOrientation orientation = UIInterfaceOrientationLandscapeLeft;
-    NYT360EulerAngleCalculationResult result = NYT360DeviceMotionCalculation(position, rate, orientation, NYT360PanningAxisHorizontal, NYT360EulerAngleCalculationNoiseThresholdDefault);
+    NYT360EulerAngleCalculationResult result = NYT360DeviceMotionCalculation(position, NYT360PanningAxisHorizontal, NYT360EulerAngleCalculationNoiseThresholdDefault);
     XCTAssertEqual(result.position.x, position.x);
     XCTAssertNotEqual(result.position.y, position.y);
 }
@@ -87,7 +87,7 @@
     rate.y = NYT360EulerAngleCalculationNoiseThresholdDefault * -0.5;
     rate.z = 10;
     UIInterfaceOrientation orientation = UIInterfaceOrientationLandscapeLeft;
-    NYT360EulerAngleCalculationResult result = NYT360DeviceMotionCalculation(position, rate, orientation, NYT360PanningAxisHorizontal, NYT360EulerAngleCalculationNoiseThresholdDefault);
+    NYT360EulerAngleCalculationResult result = NYT360DeviceMotionCalculation(position, NYT360PanningAxisHorizontal, NYT360EulerAngleCalculationNoiseThresholdDefault);
     XCTAssertNotEqual(result.position.x, 0);
     XCTAssertEqual(result.position.y, 0);
 }
@@ -99,7 +99,7 @@
     rate.y = NYT360EulerAngleCalculationNoiseThresholdDefault * 0.5;
     rate.z = 10;
     UIInterfaceOrientation orientation = UIInterfaceOrientationLandscapeLeft;
-    NYT360EulerAngleCalculationResult result = NYT360DeviceMotionCalculation(position, rate, orientation, NYT360PanningAxisHorizontal, NYT360EulerAngleCalculationNoiseThresholdDefault);
+    NYT360EulerAngleCalculationResult result = NYT360DeviceMotionCalculation(position, NYT360PanningAxisHorizontal, NYT360EulerAngleCalculationNoiseThresholdDefault);
     XCTAssertNotEqual(result.position.x, 0);
     XCTAssertEqual(result.position.y, 0);
 }
